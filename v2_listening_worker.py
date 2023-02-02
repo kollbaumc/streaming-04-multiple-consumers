@@ -5,6 +5,8 @@
     Author: Denise Case
     Date: January 15, 2023
 
+    Studied and Ran by Chris Kollbaum 2/2/2023
+
 """
 
 import pika
