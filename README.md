@@ -71,5 +71,5 @@ Which worker gets which tasks?  One worker gets the first task.  The other gets 
 
 ## Version 3 of Emitting and Listening Code
 ![Emit Image](emitterv3.png)
-![listener image](listener#1v3.png)
-![listener image](listener#2v3.png)
+![listener1 image](listener#1v3.png)
+![listener2 image](listener#2v3.png)
