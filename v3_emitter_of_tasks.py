@@ -15,14 +15,15 @@ import csv
 import socket
 import time
 
-
-def offer_rabbitmq_admin_site():
+"Changed code so it does not ask yes or no question everytime it runs."
+def offer_rabbitmq_admin_site(show_offer):
     """Offer to open the RabbitMQ Admin website"""
-    ans = input("Would you like to monitor RabbitMQ queues? y or n ")
-    print()
-    if ans.lower() == "y":
-        webbrowser.open_new("http://localhost:15672/#/queues")
+    if show_offer == True:
+        ans = input("Would you like to monitor RabbitMQ queues? y or n ")
         print()
+        if ans.lower() == "y":
+            webbrowser.open_new("http://localhost:15672/#/queues")
+            print()
 
 def send_message(host: str, queue_name: str, message: str):
     """
@@ -95,7 +96,8 @@ def send_message(host: str, queue_name: str, message: str):
 # If this is the program being run, then execute the code below
 if __name__ == "__main__":  
     # ask the user if they'd like to open the RabbitMQ Admin site
-    offer_rabbitmq_admin_site()
+    show_offer = False
+    offer_rabbitmq_admin_site(show_offer)
     # get the message from the command line
     # if no arguments are provided, use the default message
     # use the join method to convert the list of arguments into a string
