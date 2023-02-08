@@ -1,5 +1,5 @@
 """
-    This program listens for work messages contiously. 
+    This program listens for work messages continuously. 
     Start multiple versions to add more workers.  
 
     Chris Kollbaum 2/2/23
